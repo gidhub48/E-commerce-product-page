@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+body {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    height: 100vh;
+    z-index: -5;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--Black);
+}
+button {
+    background: transparent;
+    user-select: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+

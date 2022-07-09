@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --Primary-orange: hsl(26, 100%, 55%);
+  --Primary-pale-orange: hsl(25, 100%, 94%);
+  /* Neutral */
+  --veryDarkBlue: hsl(218, 12%, 13%);
+  --Dark-grayish-blue: hsl(217, 9%, 45%);
+  --Grayish-blue: hsl(220, 14%, 75%);
+  --Light-grayish-blue: hsl(230, 60%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  /* (with 75% opacity for lightbox background) */
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 1300px;
+  margin: 18vh auto 0 auto;
+}
+
+main .both-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 3.7rem 0 3.7rem;
+}
+
+main .preview-content .in-preview-content {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "main main main main" "img1 img2 img3 img4";
+  -ms-grid-rows: 4fr 1fr;
+      grid-template-rows: 4fr 1fr;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+
+main .preview-content .in-preview-content #mainPreview {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main;
+}
+
+main .preview-content .in-preview-content #img1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: img1;
+}
+
+main .preview-content .in-preview-content #img2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: img2;
+}
+
+main .preview-content .in-preview-content #img3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: img3;
+}
+
+main .preview-content .in-preview-content #img4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: img4;
+}
+
+main .preview-content .in-preview-content button {
+  aspect-ratio: 1/1;
+}
+
+main .preview-content .in-preview-content button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+main .preview-content .in-preview-content .thumbnail:hover {
+  opacity: 0.5;
+}
+
+main .explain-content .in-explain-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+main .explain-content .in-explain-content h6 {
+  font-size: 1em;
+}
+
+main .explain-content .in-explain-content .companyName {
+  font-size: 0.85em;
+  color: var(--Primary-orange);
+  margin-bottom: -.3rem;
+}
+
+main .explain-content .in-explain-content h1 {
+  font-size: 3.2em;
+  line-height: 1.15em;
+}
+
+main .explain-content .in-explain-content .description {
+  color: var(--Dark-grayish-blue);
+  line-height: 1.6em;
+}
+
+main .explain-content .in-explain-content .real-price h2.price {
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1;
+  gap: 0.7rem;
+}
+
+main .explain-content .in-explain-content .real-price h2.price .discount {
+  font-size: 0.5em;
+  padding: 0.25em 0.4rem;
+  color: var(--Primary-orange);
+  background-color: var(--Primary-pale-orange);
+  border-radius: 0.4rem;
+}
+
+main .explain-content .in-explain-content .real-price .cutPrice {
+  font-size: 1.1em;
+  margin-top: 0.4em;
+  color: var(--Grayish-blue);
+  text-decoration: line-through;
+}
+
+main .explain-content .in-explain-content .order-goods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+main .explain-content .in-explain-content .order-goods span.add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--Light-grayish-blue);
+  border-radius: 0.7rem;
+}
+
+main .explain-content .in-explain-content .order-goods span.add > * {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+main .explain-content .in-explain-content .order-goods span.add #decrease {
+  padding-bottom: 1.7rem;
+}
+
+main .explain-content .in-explain-content .order-goods span.add .howMany {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+main .explain-content .in-explain-content .order-goods span.add #increase {
+  padding-top: 0.6rem;
+}
+
+main .explain-content .in-explain-content .order-goods .big-orange-btn svg path {
+  fill: #fff;
+}
+
+@media (max-width: 1045px) {
+  main {
+    margin: 12vh auto 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 520px;
+  }
+  main .both-content {
+    padding: 0;
+  }
+  main .preview-content .in-preview-content {
+    display: block;
+  }
+  main .preview-content .in-preview-content .thumbnail {
+    display: none;
+  }
+  main .explain-content .in-explain-content {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  main .explain-content .in-explain-content h1 {
+    font-size: 2em;
+    line-height: 1.15em;
+  }
+  main .explain-content .in-explain-content .real-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .explain-content .in-explain-content .order-goods {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  main {
+    margin: 8.75vh auto 0 auto;
+  }
+  main .preview-content .in-preview-content button img {
+    border-radius: 0;
+  }
+  main .explain-content .in-explain-content {
+    padding: 1.4em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

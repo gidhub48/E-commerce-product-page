@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/css/navbar.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/general.css">
+  <title>E-commerce product page</title>
+
+</head>
+<body>
+
+  <ul class="mobile-ipad-menu" id="mobile-menu">
+    <button id="close-menu">
+      <img src="images/icon-close.svg" alt="icon-close">
+    </button>
+    <li><a href="#">Collections</a></li>
+    <li><a href="#">Men</a></li>
+    <li><a href="#">Women</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="mobile-ipad-menu-backdrop AHHHHHHHH" id="mobile-menu-backdrop"></div>
+
+
+  <div class="navbar-container">
+    <nav>
+
+        <div class="left-menu">
+
+          <div class="burger mobile-ipad-btn">
+            <button id="open-menu" class="btn-toggle-menu">
+              <img src="images/icon-menu.svg" alt="icon-menu">
+            </button>
+          </div>
+
+          <div class="logo">
+            <img src="images/logo.svg" alt="company-logo">
+          </div>
+
+          <div class="desktop-labtop-menu">
+            <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right-menu">
+          <button class="cards" id="cart">
+            <img class="card-img" src="images/icon-cart.svg" alt="cart-icon">
+            <div id="cart-n"></div>
+          </button>
+
+          <button class="avatar" id="avatar">
+            <img src="images/image-avatar.png" alt="user image">
+          </button>
+        </div>
+
+        <div class="client-orders" id="client-orders">
+          <h3>
+            Cart
+          </h3>
+          <div class="basket" id="basket">
+            <!-- this is template below .empty and .filled -->
+
+            <div class="empty" id="empty-basket">
+              Your cart is empty.
+            </div>
+
+            <div class="filled" id="filled-basket">
+              <div class="order">
+                <img src="images/image-product-1-thumbnail.jpg" alt="">
+
+                <div class="product-name">
+                  Fall Limited Edition Sneakers
+                </div>
+                <div class="price" id="your-order-price">
+                  
+                </div>
+                <div class="delete" id="cancle-order">
+                  <button id="delete"><img src="images/icon-delete.svg" alt=""></button>
+                </div>
+              </div>
+              <button id="checkout" class="big-orange-btn">Checkout</button>
+            </div>
+          </div>
+          <!-- <audio id="soundMoney">
+            <source src="sound/Money (sound effect).mp3">
+          </audio> -->
+
+        </div>
+
+      </nav>
+  </div>
+  
+  
+  <main>
+
+    <section class="preview-content both-content">
+      <div class="in-preview-content">
+        
+        <button id="mainPreview" class="main-preview-product">
+          <img src="images/image-product-1.jpg" alt="image-product-1" id="change-image">
+        </button>
+
+        <button id="img1" class="thumbnail thumbnail1">
+          <img src="images/image-product-1-thumbnail.jpg" alt="show with orange backgorund">
+        </button>
+        <button id="img2" class="thumbnail thumbnail1">
+          <img src="images/image-product-2-thumbnail.jpg" alt="shoe on the 2 rocks with stick">
+        </button>
+        <button id="img3" class="thumbnail thumbnail1">
+          <img src="images/image-product-3-thumbnail.jpg" alt="1 shoe on the rock">
+        </button>
+        <button id="img4" class="thumbnail thumbnail1">
+          <img src="images/image-product-4-thumbnail.jpg" alt="shoe that break gravity rule">
+        </button>
+
+      </div>
+    </section>
+
+    <section class="explain-content both-content">
+      <div class="in-explain-content">
+
+        <h6 class="companyName">SNEAKEY COMPANY</h6>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+        <div class="real-price">
+          <h2 class="price" id="price">$125.00<span class="discount">50%</span></h2>
+          <h6 class="cutPrice">$250.00</h6>
+        </div>
+
+        <div class="order-goods">
+          <span class="add">
+            <button id="decrease"><img src="images/icon-minus.svg" alt="+"></button>
+            <p class="howMany" id="quantity">0</p>
+            <button id="increase"><img src="images/icon-plus.svg" alt="-"></button>
+          </span>
+          <button class="big-orange-btn" id="addToCart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" <!--fill-rule="nonzero"-->/></svg>
+              Add to cart
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
