@@ -7,15 +7,50 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/css/navbar.css">
   <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/lightbox.css">
   <link rel="stylesheet" href="dist/css/general.css">
   <title>E-commerce product page</title>
 
 </head>
 <body>
 
+  <div class="light-box" id="lightbox">
+    <div class="inner-light-box">
+
+      <button class="close-lightbox" id="close-lightbox">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/></svg>
+      </button>
+      
+
+      <div id="ligthbox-main-img">
+        <button class="previous-btn btn" id="lb-previous-btn">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+
+        <img src="images/image-product-1.jpg" alt="main image" id="main-image">
+
+        <button class="next-btn btn" id="lb-next-btn">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+      </div>
+
+
+      <div id="lightbox-thumbnail">
+        <div class="flex">
+          <img src="images/image-product-1-thumbnail.jpg" class="lightbox-thumbnail select" alt="normal image shoes">
+          <img src="images/image-product-2-thumbnail.jpg" class="lightbox-thumbnail" alt="stick shoes">
+          <img src="images/image-product-3-thumbnail.jpg" class="lightbox-thumbnail" alt="shoe with 2 rock">
+          <img src="images/image-product-4-thumbnail.jpg" class="lightbox-thumbnail" alt="anti gravity shoe image">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
   <ul class="mobile-ipad-menu" id="mobile-menu">
     <button id="close-menu">
-      <img src="images/icon-close.svg" alt="icon-close">
+      <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
     </button>
     <li><a href="#">Collections</a></li>
     <li><a href="#">Men</a></li>
@@ -23,7 +58,7 @@
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
-  <div class="mobile-ipad-menu-backdrop AHHHHHHHH" id="mobile-menu-backdrop"></div>
+  <div class="backdrop" id="backdrop"></div>
 
 
   <div class="navbar-container">
@@ -76,7 +111,7 @@
 
             <div class="filled" id="filled-basket">
               <div class="order">
-                <img src="images/image-product-1-thumbnail.jpg" alt="">
+                <img src="images/image-product-1-thumbnail.jpg" alt="product1">
 
                 <div class="product-name">
                   Fall Limited Edition Sneakers
@@ -85,7 +120,7 @@
                   
                 </div>
                 <div class="delete" id="cancle-order">
-                  <button id="delete"><img src="images/icon-delete.svg" alt=""></button>
+                  <button id="delete"><img src="images/icon-delete.svg" alt="delete"></button>
                 </div>
               </div>
               <button id="checkout" class="big-orange-btn">Checkout</button>
@@ -102,21 +137,33 @@
 
     <section class="preview-content both-content">
       <div class="in-preview-content">
-        
-        <button id="mainPreview" class="main-preview-product">
-          <img src="images/image-product-1.jpg" alt="image-product-1" id="change-image">
-        </button>
 
-        <button id="img1" class="thumbnail thumbnail1">
+          
+  
+          <div id="mainPreview" class="main-preview-product">
+
+            <button class="previous-btn btn-next-previous" id="previous-btn">
+              <img src="images/icon-previous.svg" alt="previous">
+            </button>
+
+            <img src="images/image-product-1.jpg" alt="image-product-1" id="change-image">
+
+            <button class="next-btn btn-next-previous" id="next-btn">
+              <img src="images/icon-next.svg" alt="next">
+            </button>
+
+          </div>
+
+        <button id="img1" class="thumbnail thumbnail1 select">
           <img src="images/image-product-1-thumbnail.jpg" alt="show with orange backgorund">
         </button>
-        <button id="img2" class="thumbnail thumbnail1">
+        <button id="img2" class="thumbnail thumbnail2">
           <img src="images/image-product-2-thumbnail.jpg" alt="shoe on the 2 rocks with stick">
         </button>
-        <button id="img3" class="thumbnail thumbnail1">
+        <button id="img3" class="thumbnail thumbnail3">
           <img src="images/image-product-3-thumbnail.jpg" alt="1 shoe on the rock">
         </button>
-        <button id="img4" class="thumbnail thumbnail1">
+        <button id="img4" class="thumbnail thumbnail4">
           <img src="images/image-product-4-thumbnail.jpg" alt="shoe that break gravity rule">
         </button>
 

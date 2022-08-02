@@ -20,8 +20,8 @@ main{
     align-items: center;
     justify-content: space-evenly;
     max-width: 1300px;
-    margin: 18vh auto 0 auto;
-
+    margin: 0 auto;
+    padding: 18vh 0 0 0;
 
     .both-content{
         $padx:3.7rem;
@@ -30,7 +30,6 @@ main{
     }
 
     .preview-content{
-        // display: block;
 
         .in-preview-content{
             display: grid;
@@ -59,12 +58,24 @@ main{
                 grid-area: img4;
             }
 
-            button{
+            button, #mainPreview{
                 aspect-ratio: 1/1;
+                box-sizing: border-box;
+                position: relative;
+                z-index: 50;
 
                 img{
                     width: 100%;
                     border-radius: 1rem;
+                    box-sizing: border-box;
+                    border-color: var(--Primary-orange);
+                }
+            }
+            button.select{
+                    border-radius: 1.2rem;
+                    border: 3px solid var(--Primary-orange);
+                img{
+                    opacity: 0.5;
                 }
             }
             .thumbnail:hover{
@@ -171,7 +182,7 @@ main{
 
 @media (max-width:1045px) {
     main{
-        margin: 12vh auto 0 auto;
+        padding: 12vh 0 0 0;
         flex-direction: column;
         max-width: 520px;
     
@@ -183,41 +194,6 @@ main{
     
             .in-preview-content{
                 display: block;
-
-                // grid-template-areas: 
-                //     "main main main main"
-                //     "img1 img2 img3 img4"
-                // ;
-                // grid-template-rows: 4fr 1fr;
-                // grid-template-columns: repeat(4, 1fr);
-                // grid-row-gap: 1rem;
-                // grid-column-gap: 1rem;
-    
-                // #mainPreview{
-                //     grid-area: main;
-                // }
-                // #img1{
-                //     grid-area: img1;
-                // }
-                // #img2{
-                //     grid-area: img2;
-                // }
-                // #img3{
-                //     grid-area: img3;
-                // }
-                // #img4{
-                //     grid-area: img4;
-                // }
-    
-                // button{
-                //     aspect-ratio: 1/1;
-    
-                //     img{
-                //         width: 100%;
-                //         height:100%;
-                //         border-radius: 1rem;
-                //     }
-                // }
                 .thumbnail{
                     display: none;
                 }
@@ -229,96 +205,23 @@ main{
     
     
             .in-explain-content { 
-                // display: flex;
-                // flex-direction: column;
                 gap: 1rem;
                 padding: 1rem 0;
-    
-                // h6{
-                //     font-size: 1em;
-                // }
-    
-                // .companyName { 
-                //     font-size: 0.85em;
-                //     color: var(--Primary-orange);
-                //     margin-bottom: -.3rem;
-                // }
         
                 h1 { 
                     font-size: 2em;
                     line-height: 1.15em;
                 }
-        
-                // .description { 
-                //     color: var(--Dark-grayish-blue);
-                //     line-height: 1.6em;
-                // }
     
     
                 .real-price{
                     display: flex;
                     justify-content: space-between;
-                    // h2.price { 
-                    //     font-size: 2em;
-                    //     display: flex;
-                    //     align-items: center;
-                    //     font-size: 1;
-                    //     gap: 0.7rem;
-        
-                    //     .discount { 
-                    //         font-size: 0.5em;
-                    //         padding: 0.25em 0.4rem;
-                    //         color: var(--Primary-orange);
-                    //         background-color: var(--Primary-pale-orange);
-                    //         border-radius: 0.4rem;
-                    //     }
-                    // }
-                    // .cutPrice{
-                    //     font-size: 1.1em;
-                    //     margin-top: 0.4em;
-                    //     color: var(--Grayish-blue);
-                    //     text-decoration: line-through;
-                    // }
                 }
     
                 
                 .order-goods {
-                    // display: flex;
-                    // gap: 1rem;
                     flex-direction: column;
-
-                    // span.add {
-                        // display: flex;
-                        // justify-content: space-between;
-                        // align-items:center;
-                        // background-color: var(--Light-grayish-blue);
-                        // border-radius: 0.7rem;
-                        
-    
-                        // &>*{
-                            // font-size: 1.2rem;
-                            // padding: 1rem;
-                        // }
-    
-                        // #decrease {
-                        //     padding-bottom: 1.7rem;
-                        // }
-                        // .howMany {
-                        //     $x: 2rem;
-                        //     padding-left:  $x;
-                        //     padding-right: $x;
-                        // }
-                        // #increase {
-                        //     padding-top: 0.6rem;
-                        // }
-                    // }
-                    // .big-orange-btn {
-                    //     svg{
-                    //         path{
-                    //             fill: #fff;
-                    //         }
-                    //     }
-                    // }
                 }
             }
                 
@@ -328,13 +231,14 @@ main{
 
 @media (max-width:520px) {
     main{
-        margin: 8.75vh auto 0 auto;
+        padding: 8.75vh 0 0 0;
+
     
         .preview-content{
     
             .in-preview-content{
     
-                button{
+                button, #mainPreview{
     
                     img{
                         border-radius: 0;

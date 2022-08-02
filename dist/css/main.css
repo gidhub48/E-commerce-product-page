@@ -23,7 +23,8 @@ main {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   max-width: 1300px;
-  margin: 18vh auto 0 auto;
+  margin: 0 auto;
+  padding: 18vh 0 0 0;
 }
 
 main .both-content {
@@ -76,13 +77,29 @@ main .preview-content .in-preview-content #img4 {
   grid-area: img4;
 }
 
-main .preview-content .in-preview-content button {
+main .preview-content .in-preview-content button, main .preview-content .in-preview-content #mainPreview {
   aspect-ratio: 1/1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 50;
 }
 
-main .preview-content .in-preview-content button img {
+main .preview-content .in-preview-content button img, main .preview-content .in-preview-content #mainPreview img {
   width: 100%;
   border-radius: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-color: var(--Primary-orange);
+}
+
+main .preview-content .in-preview-content button.select {
+  border-radius: 1.2rem;
+  border: 3px solid var(--Primary-orange);
+}
+
+main .preview-content .in-preview-content button.select img {
+  opacity: 0.5;
 }
 
 main .preview-content .in-preview-content .thumbnail:hover {
@@ -192,7 +209,7 @@ main .explain-content .in-explain-content .order-goods .big-orange-btn svg path 
 
 @media (max-width: 1045px) {
   main {
-    margin: 12vh auto 0 auto;
+    padding: 12vh 0 0 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -234,9 +251,9 @@ main .explain-content .in-explain-content .order-goods .big-orange-btn svg path 
 
 @media (max-width: 520px) {
   main {
-    margin: 8.75vh auto 0 auto;
+    padding: 8.75vh 0 0 0;
   }
-  main .preview-content .in-preview-content button img {
+  main .preview-content .in-preview-content button img, main .preview-content .in-preview-content #mainPreview img {
     border-radius: 0;
   }
   main .explain-content .in-explain-content {

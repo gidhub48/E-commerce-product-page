@@ -17,7 +17,7 @@
   transition: all 0.3s;
 }
 
-.mobile-ipad-menu-backdrop {
+.backdrop {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -43,6 +43,7 @@
 .navbar-container {
   position: fixed;
   width: 100%;
+  z-index: 99;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -50,10 +51,10 @@
 }
 
 nav {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -171,8 +172,11 @@ nav .right-menu .avatar img:hover {
 
 nav .client-orders {
   position: absolute;
-  right: -5%;
+  margin-right: 0.5rem;
+  right: -6%;
   top: 90%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
   width: 370px;
   -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
@@ -191,7 +195,7 @@ nav .client-orders h3 {
 }
 
 nav .client-orders .basket {
-  padding: 1.4rem;
+  padding: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,7 +306,7 @@ nav .client-orders .basket .filled .order .delete #delete img {
   }
 }
 
-@media (max-width: 964px) {
+@media (max-width: 1045px) {
   html {
     font-size: 14px;
   }
@@ -312,7 +316,7 @@ nav .client-orders .basket .filled .order .delete #delete img {
   .mobile-ipad-menu {
     display: block;
     position: fixed;
-    z-index: 101;
+    z-index: 105;
     top: 0;
     left: 0;
     bottom: 0;
@@ -335,12 +339,12 @@ nav .client-orders .basket .filled .order .delete #delete img {
   .mobile-ipad-menu button {
     padding: 2.4rem 0 2rem 1.6rem;
   }
-  .mobile-ipad-menu-backdrop {
+  .backdrop {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 98;
     width: 100%;
     height: 100%;
     background: var(--Black);
@@ -348,7 +352,11 @@ nav .client-orders .basket .filled .order .delete #delete img {
   }
   nav {
     border-bottom: 0;
-    padding: 0 1rem;
+    width: 520px;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0 auto;
   }
   nav .left-menu .mobile-ipad-btn {
     display: block;
@@ -368,6 +376,24 @@ nav .client-orders .basket .filled .order .delete #delete img {
   }
   nav .client-orders {
     right: 1rem;
+  }
+}
+
+@media (max-width: 536px) {
+  nav {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  nav .right-menu .avatar {
+    padding: 0 0 0 1rem;
+  }
+  nav .client-orders {
+    width: calc(100% - 1.2rem);
+    left: .6rem;
+    right: .6rem;
+    top: calc(100% + .6rem);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
 }
 

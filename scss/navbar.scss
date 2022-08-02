@@ -17,7 +17,7 @@
     display: none;
     transition: all 0.3s;
 }
-.mobile-ipad-menu-backdrop{
+.backdrop{
     transition: all 0.2s;
 }
 .big-orange-btn{
@@ -38,13 +38,14 @@
 
 .navbar-container{
     position: fixed;
-    width: 100%;
+    width: 100%;z-index: 99;
     height: max-content;
     inset: 0;
 }
 nav {
-    position: relative;
+    
     display: flex;
+    position: relative;
     justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto;
@@ -121,7 +122,7 @@ nav {
                 left: 40%;
                 top: -15%;
                 width: 60%;
-                padding: 0 0.1rem; //0.02rem is top and bottom
+                padding: 0 0.1rem;
                 background-color: var(--Primary-orange);
                 color: var(--White);
                 font-size: 0.8em;
@@ -145,14 +146,15 @@ nav {
 
     .client-orders{
         position: absolute;
-        right: -5%;
+        margin-right: 0.5rem;
+        right: -6%;
         top: 90%;
+        transform: translatex(-50%);
         width: 370px;
         box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
         border-radius: 0.6rem;
         background: var(--White);
         transform: scaleY(0);
-        // transform-origin: top;
         transition: all 0.1s;
 
         h3{
@@ -161,11 +163,12 @@ nav {
             border-bottom: 1px solid var(--Dark-grayish-blue);
         }
         .basket{
-            padding: 1.4rem;
+            padding: 1.2rem;
             display: flex;
             flex-direction: column;
             align-items:stretch;
             justify-content: center;
+
 
             .empty{
                 font-size: 1.2rem;
@@ -249,8 +252,8 @@ nav {
     }
 }
 
-//YESSSSS!!!
-@media (max-width:964px) {  
+
+@media (max-width:1045px) {  
     html {
         font-size: 14px;
     }
@@ -261,7 +264,7 @@ nav {
     .mobile-ipad-menu{
         display: block;
         position: fixed;
-        z-index: 101;
+        z-index: 105;
         top: 0;
         left: 0;
         bottom: 0;
@@ -284,12 +287,12 @@ nav {
             padding: 2.4rem 0 2rem 1.6rem;
         }
     }
-    .mobile-ipad-menu-backdrop{
+    .backdrop{
         display: none;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 98;
         width: 100%;
         height: 100%;
         background: var(--Black);
@@ -299,7 +302,10 @@ nav {
 
     nav {
         border-bottom: 0;
-        padding: 0 1rem;
+        width: 520px;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
 
         .left-menu{
             .mobile-ipad-btn{
@@ -331,7 +337,22 @@ nav {
     }
 
 }
-
+@media (max-width:536px) {
+    nav{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    nav .right-menu .avatar {
+        padding: 0 0 0 1rem;
+    }
+    nav .client-orders{
+        width: calc(100% - 1.2rem);
+        left: .6rem;
+        right:.6rem;
+        top: calc(100% + .6rem);
+        transform: scaleY(0);
+    }
+}
 @media (max-width:500px) {
     nav .right-menu .avatar {
         padding: 0 0 0 1rem;
